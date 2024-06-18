@@ -1,0 +1,26 @@
+/* font 전용 css */
+
+/* 네온 BOLD */
+@font-face {
+    font-family: 'HELLODENVERDISPLAYBOLDBoldRg';
+    src: url('neon_font/hellodenverdisplaybold_v1.6.eot');
+    src: url('neon_font/hellodenverdisplaybold_v1.6.eot?#iefix') format('embedded-opentype'),
+         url('neon_font/hellodenverdisplaybold_v1.6.woff') format('woff'),
+         url('neon_font/hellodenverdisplaybold_v1.6.ttf') format('truetype'),
+         url('neon_font/hellodenverdisplaybold_v1.6.svg#HELLODENVERDISPLAYBOLDBoldRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 네온 REGULAR */
+@font-face {
+    font-family: 'HELLODENVERDISPLAYREGULARRg';
+    src: url('neon_font/hellodenverdisplayregular_v1.6.eot');
+    src: url('neon_font/hellodenverdisplayregular_v1.6.eot?#iefix') format('embedded-opentype'),
+         url('neon_font/hellodenverdisplayregular_v1.6.woff') format('woff'),
+         url('neon_font/hellodenverdisplayregular_v1.6.ttf') format('truetype'),
+         url('neon_font/hellodenverdisplayregular_v1.6.svg#HELLODENVERDISPLAYREGULARRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

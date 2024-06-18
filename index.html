@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오_장성훈</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/7a79c7be2a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <script src="js/common.js"></script>
+    <script src="js/page-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/skills.js"></script>
+</head>
+
+<body class="overflow-y-hidden">
+    <main class="h-[600vh] flex flex-col">
+        <!-- 메인화면 -->
+        <section class="pf-main min-h-screen relative bg-gradient-to-br from-[#0D111C] to-[#030408]">
+            <canvas id="bg-canvas" class="w-full h-full max-w-screen max-h-screen"></canvas>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[0.7]">
+                <div class="font-bold select-none">
+                    <div class="pf-main-title flex items-center text-[14.15rem]">
+                        <div class="neon text-shadow-neon">PORT</div>
+                        <div class="neon text-flicker-in-glow">FOLIO</div>
+                    </div>
+                    <div class="title-box relative transition-all duration-500">
+                        <div class="moew-icon absolute -bottom-16 -left-10 z-10 opacity-0 -rotate-[20deg] transition-opacity duration-500">
+                            <div class="relative">
+                                <div class="neon-title-icon shadow-[0_0_112px_#ff0] hover:shadow-[0_0_112px_#ff0,0_0_122px_#ff0] hover:bg-opacity-40 transition-all duration-1000 absolute w-1/2 h-1/2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff0] bg-opacity-20"></div>
+                                <img src="https://img.icons8.com/?size=200&id=rMFBzyoCXhQ4&format=png&color=000000" alt="">
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl">
+                            <div class="title-border w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-30 -translate-x-full transition-all duration-[2000ms]">
+                                <div class="neon title-name text-6xl text-right text-white h-full transition-opacity opacity-0 duration-[1000ms] flex items-center justify-center p-0.5
+                                after:w-[calc(100%-4px)] after:h-[calc(100%-4px)] after:content-['BY\._JANG_SEONG_HUN'] after:px-4 after:rounded-xl after:bg-[#0D111C] after:bg-opacity-90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mouse-icon opacity-0 transition-opacity duration-1000 absolute bottom-20 left-1/2 text-white floating-vertical">
+                <div class="flex flex-col items-center justify-center transform -translate-x-1/2">
+                    <i class="fa-solid fa-computer-mouse scale-150"></i>
+                    <i class="fa-solid fa-sort-down fa-sm pt-3 pb-5 scale-150"></i>
+                    <div class="font-semibold text-xs">Scroll Down</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로필 화면 -->
+        <section class="pf-profile min-h-screen bg-black bg-[#1E1E1E] grid grid-rows-[150px_1fr] justify-center">
+            <div class="pf-profile-title mx-auto neon text-7xl self-center">PROFILE</div>
+            <div class="w-[65vw] h-[65vh] mx-auto">
+                <div class="pf-profile-wrap w-full h-full rounded-lg">
+                    <div class="spin-wrap overflow-hidden w-full h-full p-0.5 rounded-lg">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <div class="pf-profile-content-wrap w-full h-full p-1 grid grid-cols-6">
+                            <div class="pf-profile-content-image opacity-0 transition-opacity duration-700 delay-[1.5s] col-start-1 col-end-3 flex items-center justify-center pb-32 border">
+                                <div class="avatar">
+                                    <div class="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                    </div>
+                                </div>
+                                <!-- 여기 6각 그래프 들어가면 좋을듯? -->
+                            </div>
+                            <div class="pf-profile-content-text col-start-3 col-end-7 grid grid-rows-[20%_1fr] text-white px-10 border border opacity-0 transition-opacity duration-700 delay-[1.7s]">
+                                <div class="self-center justify-self-center text-3xl font-semibold text-center">
+                                    ~하는 개발자가 되기 위해 노력하는 ooo입니다. ㅁㄴㅇㅁㄴㅇㅁㄴㅇ
+                                </div>
+                                <div>
+                                    <div>
+                                        <div>학력</div>
+                                        <div class="flex flex-col">
+                                            <div class="flex gap-2 px-4">
+                                                <div class="w-36">제천산업고등학교</div>
+                                                <div>2015.03. ~ 2018.02.</div>
+                                            </div>
+                                            <div class="flex gap-2 px-4">
+                                                <div class="w-36">충남대학교</div>
+                                                <div>2018.03. ~ 2024.02.</div>
+                                                <div>(학점 3.07 / 4.5)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>수상</div>
+                                    <div>교육과정</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 기술 스택 화면 -->
+        <section class="pf-skills min-h-screen bg-gradient-to-b from-[#030408] to-[#1E1E1E] grid grid-rows-[150px_1fr] justify-center">
+            <div class="pf-skills-title mx-auto neon text-7xl self-center">SKILLS</div>
+            <div class="w-[80vw] h-[80vh] mx-auto grid grid-cols-7">
+                <!-- 언어 -->
+                <div class="h-full grid grid-rows-[72px_1fr] grid-cols-">
+                    <div class="w-full h-full text-white text-xl text-center">Programming<br />Languages</div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Java']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-white" style="--size:7rem; --thickness: 5px;" data-max-value="75" role="progressbar">
+                                <img src="/images/skills/Java.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['JavaScript']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-yellow-400" style="--size:7rem; --thickness: 5px;" data-max-value="80" role="progressbar">
+                                <img src="/images/skills/JS.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Python']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-blue-500" style="--size:7rem; --thickness: 5px;" data-max-value="45" role="progressbar">
+                                <img src="/images/skills/python.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['C++']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-blue-600" style="--size:7rem; --thickness: 5px;" data-max-value="30" role="progressbar">
+                                <img src="/images/skills/C++.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+                        
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['C#']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-purple-600" style="--size:7rem; --thickness: 5px;" data-max-value="25" role="progressbar">
+                                <img src="/images/skills/C%23.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프론트엔드 및 라이브러리 -->
+                <div class="h-full grid grid-rows-[72px_1fr]">
+                    <div class="w-full h-full text-white text-xl text-center">Front-end</div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['HTML']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[orange]" style="--size:7rem; --thickness: 5px;" data-max-value="85" role="progressbar">
+                                <img src="/images/skills/HTML5.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['CSS']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[#33A9DC]" style="--size:7rem; --thickness: 5px;" data-max-value="80" role="progressbar">
+                                <img src="/images/skills/CSS3.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['jQuery']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-blue-500" style="--size:7rem; --thickness: 5px;" data-max-value="75" role="progressbar">
+                                <img src="/images/skills/jQuery.png" alt="">
+                            </div>
+                        </div>
+    
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['React']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[#00DEFF]" style="--size:7rem; --thickness: 5px;" data-max-value="20" role="progressbar">
+                                <img src="/images/skills/React.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 백엔드, 서버-사이드 템플릿 엔진, 마이바티스 프레임워크 -->
+                <div class="h-full col-start-3 col-end-5 grid grid-rows-[72px_1fr]">
+                    <div class="w-full h-full text-white text-xl text-center">Back-end</div>
+                    <div class="grid grid-cols-2 grid-rows-5 gap-x-20 items-start mx-auto">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['node.js']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[#80CD08]" style="--size:7rem; --thickness: 5px;" data-max-value="50" role="progressbar">
+                                <img src="/images/skills/node.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Spring']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl text-center transition-all duration-300"></div>
+                            <div class="radial-progress text-[#6CB33D]" style="--size:7rem; --thickness: 5px;" data-max-value="40" role="progressbar">
+                                <img src="/images/skills/Spring.png" alt="" class="scale-[0.7]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Spring_Boot']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl text-center transition-all duration-300"></div>
+                            <div class="radial-progress text-[#6CB33D]" style="--size:7rem; --thickness: 5px;" data-max-value="70" role="progressbar">
+                                <img src="/images/skills/Spring_Boot.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['MyBatis']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-gray-700" style="--size:7rem; --thickness: 5px;" data-max-value="55" role="progressbar">
+                                <img src="/images/skills/MyBatis.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['JSP']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-gray-700" style="--size:7rem; --thickness: 5px;" data-max-value="65" role="progressbar">
+                                <img src="/images/skills/JSP.png" alt="" class="scale-[0.8] rounded-full bg-white">
+                            </div>
+                        </div>
+                        
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['thymeleaf']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-green-700" style="--size:7rem; --thickness: 5px;" data-max-value="25" role="progressbar">
+                                <img src="/images/skills/thymeleaf.png" alt="" class="scale-[0.8] rounded-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="h-full grid grid-rows-[72px_1fr]">
+                    <div class="w-full h-full self-center text-white text-xl text-center">DB &<br /> DBMS</div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['MySQL']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-gray-700" style="--size:7rem; --thickness: 5px;" data-max-value="65" role="progressbar">
+                                <img src="/images/skills/MySQL.png" alt="" class="scale-[0.8] rounded-full bg-white">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['SQLyog']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-blue-400" style="--size:7rem; --thickness: 5px;" data-max-value="45" role="progressbar">
+                                <img src="/images/skills/sqlyog.png" alt="" class="">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['DBeaver']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-yellow-800" style="--size:7rem; --thickness: 5px;" data-max-value="20" role="progressbar">
+                                <img src="/images/skills/DBeaver.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IDE -->
+                <div class="h-full grid grid-rows-[72px_1fr]">
+                    <div class="w-full h-full self-center text-white text-xl text-center">IDE</div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['STS4']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-green-600" style="--size:7rem; --thickness: 5px;" data-max-value="70" role="progressbar">
+                                <img src="/images/skills/Sts4.png" alt="" class="scale-[1.2]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Eclipse']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[#2C2256]" style="--size:7rem; --thickness: 5px;" data-max-value="70" role="progressbar">
+                                <img src="/images/skills/Eclipse.png" alt="" class="scale-[0.8] bg-white rounded-full">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['IntelliJ']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-pink-600" style="--size:7rem; --thickness: 5px;" data-max-value="40" role="progressbar">
+                                <img src="/images/skills/IntelliJ.png" alt="" class="scale-[0.8]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Visual_Studio']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-base transition-all duration-300"></div>
+                            <div class="radial-progress text-purple-400" style="--size:7rem; --thickness: 5px;" data-max-value="35" role="progressbar">
+                                <img src="/images/skills/visual_studio.png" alt="" class="scale-[0.7]">
+                            </div>
+                        </div>
+
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['Visual_Studio_Code']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-base text-center transition-all duration-300"></div>
+                            <div class="radial-progress text-blue-500" style="--size:7rem; --thickness: 5px;" data-max-value="65" role="progressbar">
+                                <img src="/images/skills/visual_studio_code.png" alt="" class="scale-[0.6]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version Control -->
+                <div class="h-full grid grid-rows-[72px_1fr]">
+                    <div class="w-full h-full self-center text-white text-xl text-center">Version Control</div>
+                    <div class="flex flex-col gap-4 items-center">
+                        <div class="relative w-[7rem] rounded-full overflow-hidden group">
+                            <div class="absolute top-0 z-10 group-hover:bg-black group-hover:bg-opacity-80 group-hover:after:content-['git']
+                            w-full h-full flex justify-center items-center text-white font-semibold text-xl transition-all duration-300"></div>
+                            <div class="radial-progress text-[#F05033]" style="--size:7rem; --thickness: 5px;" data-max-value="55" role="progressbar">
+                                <img src="/images/skills/Git.png" alt="" class="scale-[0.7]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 포트폴리오 화면 -->
+        <section class="min-h-screen bg-gradient-to-b from-[#1E1E1E] to-[#0D111C]">
+        </section>
+
+        <!-- ?? -->
+        <section class="min-h-screen bg-gradient-to-b from-[#0D111C] from-20% via-[#0A0E17] via-70% to-[#040409] to-100%">
+        </section>
+
+        <div class="bg-gradient-to-b from-[#040409] from-30% via-[black] via-70% to-[#242424] to-100%">
+            <!-- 연락 -->
+            <section class="min-h-screen">
+            </section>
+
+            <section class="pf-footer min-h-[120px] h-[120px] text-white text-lg">
+                <div class="w-full h-full flex items-center justify-center">
+                    <p>ⓒ JSH_PORTFOLIO. Created by&nbsp;</p>
+                    <p class="tooltip" data-tip="JANG_SEONG_HUN">
+                        <span class="font-semibold">JSH</span>
+                    </p>
+                    <p>.&nbsp;All rights reserved.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 버튼 -->
+        <div class="fixed top-1/2 right-6 transform -translate-y-1/2 flex flex-col gap-1">
+            <button class="tooltip tooltip-left flex" data-tip="메인">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="프로필">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="스킬">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+            
+            <button class="tooltip tooltip-left flex" data-tip="메인">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="메인">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="메인">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
