@@ -33,6 +33,12 @@ function runAnimation(index) {
     // 스킬 섹션 애니메이션 효과
     else if(index === 2) {
         $('.pf-skills .pf-skills-title').addClass('text-shadow-neon');
-        initializeRadialProgress();
+        $('.pf-skills-subtitle, .pf-skills-list>li, .pf-skills-list>li>div').removeClass('opacity-0');
+        setTimeout(() => initializeRadialProgress(), 1000);
+    }
+
+    // 포트폴리오 섹션 애니메이션 효과
+    else if(index === 3) {
+        $('.pf-portfolio .pf-portfolio-title').addClass('text-shadow-neon');
     }
 }

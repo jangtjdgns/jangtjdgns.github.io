@@ -725,3 +725,36 @@
         color: #EFF6FF;
     }
 }
+
+
+
+
+/* === 포르폴리오 페이지 === */
+.pf-portfolio .text-shadow-neon {
+    -webkit-animation: text-shadow-neon-protfolio 0.6s both;
+    animation: text-shadow-neon-protfolio 0.6s both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes text-shadow-neon-protfolio {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-portfolio-text-shadow-color), 0 0 82px var(--pf-portfolio-text-shadow-color), 0 0 92px var(--pf-portfolio-text-shadow-color), 0 0 102px var(--pf-portfolio-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+@keyframes text-shadow-neon-protfolio {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-portfolio-text-shadow-color), 0 0 82px var(--pf-portfolio-text-shadow-color), 0 0 92px var(--pf-portfolio-text-shadow-color), 0 0 102px var(--pf-portfolio-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
