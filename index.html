@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오_장성훈</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/7a79c7be2a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <script src="js/common.js"></script>
+    <script src="js/page-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/skills.js"></script>
+</head>
+
+<body class="overflow-y-hidden">
+    <main class="h-[600vh] flex flex-col">
+        <!-- 메인화면 -->
+        <section class="pf-main min-h-screen relative bg-gradient-to-br from-[#0D111C] to-[#030408]">
+            <canvas id="bg-canvas" class="w-full h-full max-w-screen max-h-screen"></canvas>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 scale-[0.7]">
+                <div class="font-bold select-none">
+                    <div class="pf-main-title flex items-center text-[14.15rem]">
+                        <div class="neon text-shadow-neon">PORT</div>
+                        <div class="neon text-flicker-in-glow">FOLIO</div>
+                    </div>
+                    <div class="title-box relative transition-all duration-500">
+                        <div class="moew-icon absolute -bottom-16 -left-10 z-10 opacity-0 -rotate-[20deg] transition-opacity duration-500">
+                            <div class="relative">
+                                <div class="neon-title-icon shadow-[0_0_112px_#ff0] hover:shadow-[0_0_112px_#ff0,0_0_122px_#ff0] hover:bg-opacity-40 transition-all duration-1000 absolute w-1/2 h-1/2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff0] bg-opacity-20"></div>
+                                <img src="https://img.icons8.com/?size=200&id=rMFBzyoCXhQ4&format=png&color=000000" alt="">
+                            </div>
+                        </div>
+                        <div class="overflow-hidden rounded-xl">
+                            <div class="title-border w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-30 -translate-x-full transition-all duration-[2000ms]">
+                                <div class="neon title-name text-6xl text-right text-white h-full transition-opacity opacity-0 duration-[1000ms] flex items-center justify-center p-0.5
+                                after:w-[calc(100%-4px)] after:h-[calc(100%-4px)] after:content-['BY\._JANG_SEONG_HUN'] after:px-4 after:rounded-xl after:bg-[#0D111C] after:bg-opacity-90">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mouse-icon opacity-0 transition-opacity duration-1000 absolute bottom-20 left-1/2 text-white floating-vertical">
+                <div class="flex flex-col items-center justify-center transform -translate-x-1/2">
+                    <i class="fa-solid fa-computer-mouse scale-150"></i>
+                    <i class="fa-solid fa-sort-down fa-sm pt-3 pb-5 scale-150"></i>
+                    <div class="font-semibold text-xs">Scroll Down</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로필 화면 -->
+        <section class="pf-profile min-h-screen bg-black bg-[#1E1E1E] grid grid-rows-[150px_1fr] justify-center">
+            
+        </section>
+
+        <!-- 기술 스택 화면 -->
+        <section class="pf-skills min-h-screen bg-gradient-to-b from-[#030408] to-[#1E1E1E] grid grid-rows-[150px_1fr] justify-center">
+            
+        </section>
+
+        <!-- 프로젝트 화면 -->
+        <section class="pf-project min-h-screen bg-gradient-to-b from-[#1E1E1E] to-[#0D111C] grid grid-rows-[150px_1fr] justify-center">
+            
+        </section>
+
+        <!-- ?? -->
+        <section class="min-h-screen bg-gradient-to-b from-[#0D111C] from-20% via-[#0A0E17] via-70% to-[#040409] to-100%">
+        </section>
+
+        <div class="bg-gradient-to-b from-[#040409] from-30% via-[black] via-70% to-[#242424] to-100%">
+            <!-- 연락처 -->
+            <section class="pf-contact min-h-screen grid grid-rows-[150px_1fr] justify-center">
+                
+            </section>
+
+            <section class="pf-footer min-h-[120px] h-[120px] text-white text-lg">
+                <div class="w-full h-full flex items-center justify-center">
+                    <p>ⓒ JSH_PORTFOLIO. Created by&nbsp;</p>
+                    <p class="tooltip" data-tip="JANG_SEONG_HUN">
+                        <span class="font-semibold">JSH</span>
+                    </p>
+                    <p>.&nbsp;All rights reserved.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 버튼 -->
+        <div class="fixed top-1/2 right-6 transform -translate-y-1/2 flex flex-col gap-1">
+            <button class="tooltip tooltip-left flex" data-tip="메인">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="프로필">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="스킬">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+            
+            <button class="tooltip tooltip-left flex" data-tip="프로젝트">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="??">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+
+            <button class="tooltip tooltip-left flex" data-tip="연락처">
+                <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>

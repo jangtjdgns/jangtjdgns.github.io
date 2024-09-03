@@ -1,0 +1,760 @@
+/* 애니메이션 전용 css */
+
+/* === 메인 페이지 애니메이션 === */
+.pf-main .text-shadow-neon {
+    -webkit-animation: text-shadow-neon-main 0.6s both;
+    animation: text-shadow-neon-main 0.6s both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes text-shadow-neon-main {
+    0% {
+        -webkit-transform: translateX(-16px) translateY(16px);
+        transform: translateX(-16px) translateY(16px);
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-shadow-color), 0 0 82px var(--pf-main-text-shadow-color), 0 0 92px var(--pf-main-text-shadow-color), 0 0 102px var(--pf-main-text-shadow-color);
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+        color: white;
+    }
+}
+
+@keyframes text-shadow-neon-main {
+    0% {
+        -webkit-transform: translateX(-16px) translateY(16px);
+        transform: translateX(-16px) translateY(16px);
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-shadow-color), 0 0 82px var(--pf-main-text-shadow-color), 0 0 92px var(--pf-main-text-shadow-color), 0 0 102px var(--pf-main-text-shadow-color);
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+        color: white;
+    }
+}
+
+
+
+/* 글자 깜빡임 효과 */
+.pf-main .text-flicker-in-glow {
+    -webkit-animation: text-flicker-in-glow-main 3.6s linear both;
+    animation: text-flicker-in-glow-main 3.6s linear both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes text-flicker-in-glow-main {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    10.1% {
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    10.2% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20% {
+        opacity: 0;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    20.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    30% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    30.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    30.5% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    45% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    45.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    55% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    57% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    57.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    65% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    65.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    75% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    77% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    77.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    85% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    86% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    86.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+}
+
+@keyframes text-flicker-in-glow-main {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 0;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    10.1% {
+        opacity: 1;
+        text-shadow: none;
+    }
+
+    10.2% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20% {
+        opacity: 0;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    20.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color);
+    }
+
+    20.6% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    30% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    30.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    30.5% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    30.6% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    45% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    45.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    55% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    55.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    57% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    57.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    60.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    65% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    65.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    75% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    75.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    77% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    77.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    85% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    85.1% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    86% {
+        opacity: 0;
+        text-shadow: none;
+        color: white;
+    }
+
+    86.1% {
+        opacity: 1;
+        text-shadow: 0 0 30px var(--pf-main-text-flicker-in-glow-color), 0 0 60px var(--pf-main-text-flicker-in-glow-color), 0 0 110px var(--pf-main-text-flicker-in-glow-color), 0 0 100px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-main-text-flicker-in-glow-color), 0 0 82px var(--pf-main-text-flicker-in-glow-color), 0 0 92px var(--pf-main-text-flicker-in-glow-color), 0 0 102px var(--pf-main-text-flicker-in-glow-color);
+        color: white;
+    }
+}
+
+
+
+/* moew 아이콘에 마우스 올렸을 때 */
+.glowing-effect {
+    -webkit-animation: glowing-effect 10s infinite both;
+    animation: glowing-effect 10s infinite both;
+}
+
+@-webkit-keyframes glowing-effect {
+    0% {
+        box-shadow: 0 0 112px #ff0;
+    }
+
+    50% {
+        box-shadow: 0 0 80px #ff0;
+    }
+
+    100% {
+        box-shadow: 0 0 112px #ff0;
+    }
+}
+
+@keyframes glowing-effect {
+    0% {
+        box-shadow: 0 0 112px #ff0;
+    }
+
+    50% {
+        box-shadow: 0 0 80px #ff0;
+    }
+
+    100% {
+        box-shadow: 0 0 112px #ff0;
+    }
+}
+
+
+
+/* 떠있는 효과 수직 */
+.floating-vertical {
+    -webkit-animation: floating-vertical 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: floating-vertical 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+@-webkit-keyframes floating-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px);
+    }
+
+    80% {
+        -webkit-transform: translateY(4.8px);
+        transform: translateY(4.8px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-4.8px);
+        transform: translateY(-4.8px);
+    }
+}
+
+@keyframes floating-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px);
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px);
+    }
+}
+
+
+
+
+
+/* === 프로필 페이지 애니메이션 === */
+.pf-profile .text-shadow-neon {
+    -webkit-animation: text-shadow-neon-profile 0.6s both;
+    animation: text-shadow-neon-profile 0.6s both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes text-shadow-neon-profile {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-profile-text-shadow-color), 0 0 82px var(--pf-profile-text-shadow-color), 0 0 92px var(--pf-profile-text-shadow-color), 0 0 102px var(--pf-profile-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+@keyframes text-shadow-neon-profile {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-profile-text-shadow-color), 0 0 82px var(--pf-profile-text-shadow-color), 0 0 92px var(--pf-profile-text-shadow-color), 0 0 102px var(--pf-profile-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+/* spin 애니메이션 */
+.spin-wrap {
+    position: relative;
+}
+
+.spin-wrap .spin {
+    position: absolute;
+    display: block;
+}
+
+.spin-wrap .spin:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* background: linear-gradient(90deg, transparent, var(--pf-profile-spin-color)); */
+    background-color: var(--pf-profile-spin-color);
+    animation: spinTop 0.5s linear forwards;
+}
+
+@keyframes spinTop {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 0%;
+    }
+}
+
+.spin-wrap .spin:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    /* background: linear-gradient(180deg, transparent, var(--pf-profile-spin-color)); */
+    background-color: var(--pf-profile-spin-color);
+    animation: spinRight 0.5s linear forwards;
+    animation-delay: 0.25s;
+}
+
+@keyframes spinRight {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 0%;
+    }
+}
+
+.spin-wrap .spin:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    /* background: linear-gradient(270deg, transparent, var(--pf-profile-spin-color)); */
+    background-color: var(--pf-profile-spin-color);
+    animation: spinBottom 0.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes spinBottom {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 0%;
+    }
+}
+
+.spin-wrap .spin:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    /* background: linear-gradient(360deg, transparent, var(--pf-profile-spin-color)); */
+    background-color: var(--pf-profile-spin-color);
+    animation: spinLeft 0.5s linear forwards;
+    /* animation: spinLeft 2s linear infinite; */
+    animation-delay: 0.75s;
+}
+
+@keyframes spinLeft {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 0%;
+    }
+}
+
+
+/* box-shadow 애니메이션 */
+.pf-profile .profile-animation {
+    -webkit-animation: profile-animation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: profile-animation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes profile-animation {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 6px #fff, 0 0 20px #fff, 0 0 42px var(--pf-profile-box-shadow-color), 0 0 62px var(--pf-profile-box-shadow-color);
+        box-shadow: 0 0 6px #fff, 0 0 20px #fff, 0 0 42px var(--pf-profile-box-shadow-color), 0 0 62px var(--pf-profile-box-shadow-color);
+    }
+}
+
+@keyframes profile-animation {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 6px #fff, 0 0 20px #fff, 0 0 42px var(--pf-profile-box-shadow-color), 0 0 62px var(--pf-profile-box-shadow-color);
+        box-shadow: 0 0 6px #fff, 0 0 20px #fff, 0 0 42px var(--pf-profile-box-shadow-color), 0 0 62px var(--pf-profile-box-shadow-color);
+    }
+}
+
+
+
+
+
+/* === 기술 스택 페이지 === */
+.pf-skills .text-shadow-neon {
+    -webkit-animation: text-shadow-neon-skills 0.6s both;
+    animation: text-shadow-neon-skills 0.6s both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes text-shadow-neon-skills {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-skills-text-shadow-color), 0 0 82px var(--pf-skills-text-shadow-color), 0 0 92px var(--pf-skills-text-shadow-color), 0 0 102px var(--pf-skills-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+@keyframes text-shadow-neon-skills {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-skills-text-shadow-color), 0 0 82px var(--pf-skills-text-shadow-color), 0 0 92px var(--pf-skills-text-shadow-color), 0 0 102px var(--pf-skills-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+
+
+
+/* === 포르폴리오 페이지 === */
+.pf-project .text-shadow-neon {
+    -webkit-animation: text-shadow-neon-project 0.6s both;
+    animation: text-shadow-neon-project 0.6s both;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes text-shadow-neon-project {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-project-text-shadow-color), 0 0 82px var(--pf-project-text-shadow-color), 0 0 92px var(--pf-project-text-shadow-color), 0 0 102px var(--pf-project-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
+
+@keyframes text-shadow-neon-project {
+    0% {
+        text-shadow: 0 0 0;
+    }
+
+    100% {
+        text-shadow: 0 0 21px #fff, 0 0 42px var(--pf-project-text-shadow-color), 0 0 82px var(--pf-project-text-shadow-color), 0 0 92px var(--pf-project-text-shadow-color), 0 0 102px var(--pf-project-text-shadow-color);
+        color: #EFF6FF;
+    }
+}
