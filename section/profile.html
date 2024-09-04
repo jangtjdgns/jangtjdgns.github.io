@@ -1,80 +1,161 @@
 <div class="pf-profile-title mx-auto neon text-7xl self-center">PROFILE</div>
 <div class="w-[65vw] h-[65vh] mx-auto">
-    <div class="pf-profile-wrap w-full h-full rounded-lg">
-        <div class="spin-wrap overflow-hidden w-full h-full p-0.5 rounded-lg">
-            <span></span>
+    <div class="pf-profile-wrap w-full h-full rounded-3xl">
+        <div class="spin-wrap overflow-hidden w-full h-full p-4">
+            <span class="from-transparent"></span>
             <span></span>
             <span></span>
             <span></span>
 
             <div class="pf-profile-content-wrap w-full h-full p-1 grid grid-cols-6">
-                <div class="pf-profile-content-image opacity-0 transition-opacity duration-700 delay-[1.5s] col-start-1 col-end-3 flex items-center justify-center border">
-                    <div class="w-full h-full flex items-start justify-center gap-3 pt-10 px-3">
+                <div class="pf-profile-content-image opacity-0 transition-opacity duration-700 delay-[1.5s] col-start-1 col-end-3 flex items-center justify-center">
+                    <div class="flex items-center justify-center flex-col gap-4">
                         <div class="avatar">
                             <div class="h-96 w-80 rounded-lg ring-white ring">
                               <img src="/images/profile/JSH.jpg" />
                             </div>
                         </div>
+                        
+                        <div class="text-white text-center">
+                            <div class="badge badge-lg badge-neutral font-bold m-2">Age_25</div>
+                            <div class="badge badge-lg badge-neutral font-bold m-2">010-8942-9728</div>
+                            <div>
+                                <a href="mailto:jangtjdgns9@naver.com?subject=안녕하세요"
+                                    class="badge badge-lg badge-neutral font-bold m-2 border-2 hover:border-white transition-all duration-300
+                                        flex flex-col-reverse items-center justify-start active:translate-y-1 active:border-gray-400 active:bg-opacity-80 overflow-hidden group">
+                                    <span class="group-hover:translate-y-full transition-transform duration-300">jangtjdgns9@naver.com</span>
+                                    <span class="group-hover:translate-y-full transition-transform duration-300"><i class="fa-regular fa-envelope" style="color: #ffffff;"></i></span>                                   
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="pf-profile-content-text col-start-3 col-end-7 grid grid-rows-[20%_3%_20%_1fr] text-white px-10 border border opacity-0 transition-opacity duration-700 delay-[1.7s]">
+
+                <div class="pf-profile-content-text col-start-3 col-end-7 grid grid-rows-[20%_3%_60%_1fr] text-white px-10 opacity-0 transition-opacity duration-700 delay-[1.7s]">
                     <div class="self-center justify-self-center text-3xl font-semibold text-center">
-                        안녕하세요! 신입개발자 장성훈입니다.
+                        <p>안녕하세요! 신입개발자 장성훈입니다.</p>
                     </div>
                     <hr />
-                    <div>
-                        <p class="text-lg">학기 중 접하게 된 코딩에 매력을 느껴 지금까지 개발공부에 매진하여 성장하고 있습니다. 늦게 시작한 만큼 뒤쳐지지 않기 위해 노력했고, 풀스택 개발자가 되기위한 발판으로 IT 학원을 다니며 실력을 쌓아왔습니다.</p>
-                        
-                        <!-- <div class="mt-10 mx-20 flex flex-col gap-4">
-                            <div class="badge badge-lg badge-neutral scale-130">기본기가 탄탄한 개발자</div>
-                            <div class="badge badge-lg badge-neutral scale-130">기본기가 탄탄한 개발자</div>
-                            <div class="badge badge-lg badge-neutral scale-130">기본기가 탄탄한 개발자</div>
-                            <div class="badge badge-lg badge-neutral scale-130">기본기가 탄탄한 개발자</div>
-                            <div class="badge badge-lg badge-neutral scale-130">기본기가 탄탄한 개발자</div>
-                        </div> -->
-                    </div>
+                    <!-- 캐러셀 -->
+                    <div class="border-b profile-carousel-wrap relative overflow-hidden">
+                        <ul class="flex w-[300%] transition-transform duration-[.6s]">
+                            <!-- item 1 -->
+                            <li class="profile-carousel-item w-[100%]">
+                                <div>
+                                    <p class="text-lg">학기 중 접하게 된 코딩에 매력을 느껴 지금까지 개발공부에 매진하여 성장하고 있습니다. 늦게 시작한 만큼 뒤쳐지지 않기 위해 노력했고, 풀스택 개발자가 되기위한 발판으로 IT 학원을 다니며 실력을 쌓아왔습니다.</p>
+                                    <!-- 목표 -->
+                                    <p class="font-bold pt-3">- 기본기가 탄탄한 개발자</p>
+                                    <p class="font-bold pt-2.5">- 에러에 도전하는 개발자</p>
+                                    <p class="font-bold pt-2.5">- 소통하는 개발자</p>
+                                    <p class="font-bold pt-2.5">- 사용자 입장에서 생각하는 개발자</p>
+                                </div>
+                                <!-- 바로가기 -->
+                                <div class="flex items-center justify-start gap-4 pt-10 px-4">
+                                    <div>
+                                        <a href="https://github.com/jangtjdgns?tab=overview&from=2023-12-01&to=2023-12-31" target="_blank"
+                                        class="tooltip rounded-full bg-black border-[3px] border-white hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                            data-tip="github" data-ripple-light="true">
+                                            <img src="../images/profile/github.png" class="w-12 h-12 rounded-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://codepen.io/jangtjdgns" target="_blank"
+                                        class="tooltip rounded-full bg-black border-[3px] border-white hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                            data-tip="codepen" data-ripple-light="true">
+                                            <img src="../images/profile/codepen.png" class="w-12 h-12 rounded-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://codeup.kr/userinfo.php?user=p941260" target="_blank"
+                                        class="tooltip rounded-full bg-black border-[3px] border-white hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                            data-tip="codeup" data-ripple-light="true">
+                                            <img src="../images/profile/CodeUp.png" class="w-12 h-12 object-cover object-left rounded-full">
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://blog.naver.com/jangtjdgns9" target="_blank"
+                                        class="tooltip rounded-full bg-black border-[3px] border-[#03cf5d] hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                            data-tip="blog" data-ripple-light="true">
+                                            <img src="../images/profile/naver.png" class="w-12 h-12 rounded-full">
+                                        </a>
+                                    </div>
+                                </div>
+                                <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+                            </li>
 
-                    <div class="grid grid-cols-2 grid-rows-2 gap-3">
-                        <div>
-                            <div class="text-2xl font-bold pb-3">학력</div>
-                            <hr />
-                            <div class="flex flex-col gap-1.5 pt-1">
-                                <div><b>제천산업고등학교</b> / 2018.02
-                                    <div class="tooltip tooltip-close tooltip-top" data-tip="생산자동화과">
-                                        <button class="btn btn-xs btn-circle scale-[.6]"><i class="fa-solid fa-info"></i></button>
+                            <!-- item 2 -->
+                            <li class="profile-carousel-item w-[100%]">
+                                <div class="grid grid-cols-2 gap-3 px-3">
+                                    <div>
+                                        <div class="text-2xl font-bold pb-3">학력</div>
+                                        <hr />
+                                        <div class="flex flex-col gap-1.5 pt-1">
+                                            <div><b>제천산업고등학교</b> / 2018.02
+                                                <div class="tooltip tooltip-close tooltip-top" data-tip="생산자동화과">
+                                                    <button class="btn btn-xs btn-circle scale-[.6]"><i class="fa-solid fa-info"></i></button>
+                                                </div>
+                                            </div>
+                                            <div><b>충남대학교</b> / 2024.02
+                                                <div class="tooltip tooltip-close tooltip-top" data-tip="기술교육과 / 3.07">
+                                                    <button class="btn btn-xs btn-circle scale-[.6]"><i class="fa-solid fa-info"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold pb-3">코리아IT - 교육과정</div>
+                                        <hr />
+                                        <div class="flex flex-col gap-1.5 pt-1">
+                                            <div class="text-sm"><b>Java</b> / 2023.01.12.~2023.02.10</div>
+                                            <div class="text-sm"><b>DBMS</b> / 2023.02.13~2023.02.24</div>
+                                            <div class="text-sm"><b>Pythome기초</b> / 2023.04.22~2023.05.14</div>
+                                            <div class="text-sm"><b>Front-End</b> / 2023.05.20~2023.10.28</div>
+                                            <div class="text-sm"><b>Back-End</b> / 2023.11.08~2024.04.08</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div><b>충남대학교</b> / 2024.02
-                                    <div class="tooltip tooltip-close tooltip-top" data-tip="기술교육과 / 3.07">
-                                        <button class="btn btn-xs btn-circle scale-[.6]"><i class="fa-solid fa-info"></i></button>
+                            </li>
+
+                            <!-- item 3 -->
+                            <li class="profile-carousel-item w-[100%]">
+                                <div class="grid grid-cols-2 gap-3 px-3">
+                                    <div>
+                                        <div class="text-2xl font-bold pb-3">자격</div>
+                                        <hr />
+                                        <div class="flex flex-col gap-1.5 pt-1">
+                                            <div class="text-sm"><b>교원자격증2급</b> / 2024.02</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold pb-3">수상</div>
+                                        <hr />
+                                        <div class="flex flex-col gap-1.5 pt-1">
+                                            <div class="text-sm"><b>CNU Edu 미래교육 교수-학습자료 개발 전시회 / 디지털 교육자료 부문 / 대상</b> / 2022.11</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 캐러셀 버튼, 컨트롤 -->
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="scale-[.5]">
+                            <button class="profile-carousel-prev-btn btn btn-circle text-2xl bg-blue-100 hover:bg-blue-200">
+                                <i id="prev_btn" class="fa-solid fa-angle-left"></i>
+                            </button>
                         </div>
-                        <div>
-                            <div class="text-2xl font-bold pb-3">코리아IT - 교육과정</div>
-                            <hr />
-                            <div class="flex flex-col gap-1.5 pt-1">
-                                <div class="text-sm"><b>Java</b> / 2023.01.12.~2023.02.10</div>
-                                <div class="text-sm"><b>DBMS</b> / 2023.02.13~2023.02.24</div>
-                                <div class="text-sm"><b>Pythome기초</b> / 2023.04.22~2023.05.14</div>
-                                <div class="text-sm"><b>Front-End</b> / 2023.05.20~2023.10.28</div>
-                                <div class="text-sm"><b>Back-End</b> / 2023.11.08~2024.04.08</div>
-                            </div>
+
+                        <div class="profile-carousel-controls flex gap-2">
+                            <button class="w-10 h-3 bg-blue-500 rounded-full hover:w-10 transition-all duration-200"></button>
+                            <button class="w-3 h-3 bg-blue-200 rounded-full hover:w-10 transition-all duration-200"></button>
+                            <button class="w-3 h-3 bg-blue-200 rounded-full hover:w-10 transition-all duration-200"></button>
                         </div>
-                        <div>
-                            <div class="text-2xl font-bold pb-3">자격</div>
-                            <hr />
-                            <div class="flex flex-col gap-1.5 pt-1">
-                                <div class="text-sm"><b>교원자격증2급</b> / 2024.02</div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-2xl font-bold pb-3">수상</div>
-                            <hr />
-                            <div class="flex flex-col gap-1.5 pt-1">
-                                <div class="text-sm"><b>CNU Edu 미래교육 교수-학습자료 개발 전시회 / 디지털 교육자료 부문 / 대상</b> / 2022.11</div>
-                            </div>
+
+                        <div class="scale-[.5]">
+                            <button class="profile-carousel-next-btn btn btn-circle text-2xl bg-blue-100 hover:bg-blue-200">
+                                <i id="next_btn" class="fa-solid fa-angle-right"></i>
+                            </button>
                         </div>
                     </div>
                 </div>

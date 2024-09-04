@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포트폴리오_장성훈</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/7a79c7be2a.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font.css">
@@ -38,10 +38,10 @@
                                 <img src="https://img.icons8.com/?size=200&id=rMFBzyoCXhQ4&format=png&color=000000" alt="">
                             </div>
                         </div>
-                        <div class="overflow-hidden rounded-xl">
-                            <div class="title-border w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500 bg-opacity-30 -translate-x-full transition-all duration-[2000ms]">
-                                <div class="neon title-name text-6xl text-right text-white h-full transition-opacity opacity-0 duration-[1000ms] flex items-center justify-center p-0.5
-                                after:w-[calc(100%-4px)] after:h-[calc(100%-4px)] after:content-['BY\._JANG_SEONG_HUN'] after:px-4 after:rounded-xl after:bg-[#0D111C] after:bg-opacity-90">
+                        <div class="overflow-hidden rounded-xl flex justify-end">
+                            <div class="title-border w-full h-2 border-b-4 border-[#f01486] bg-opacity-30 -translate-x-full transition-all duration-[2000ms]">
+                                <div class="neon title-name text-6xl text-right text-white h-full transition-opacity opacity-0 duration-[1000ms]
+                                flex items-center justify-end px-4 after:content-['BY\._JANG_SEONG_HUN'] bg-transparent">
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,14 @@
                     <div class="font-semibold text-xs">Scroll Down</div>
                 </div>
             </div>
+
+            <div class="displly-resolution opacity-0 transition-opacity duration-1000 absolute bottom-5 right-5 pointer-events-none">
+                <div class="badge badge-xs badge-neutral">해상도 2560*1600</div>
+            </div>
         </section>
 
         <!-- 프로필 화면 -->
-        <section class="pf-profile min-h-screen bg-black bg-[#1E1E1E] grid grid-rows-[150px_1fr] justify-center">
+        <section class="pf-profile min-h-screen bg-black grid grid-rows-[150px_1fr] justify-center">
             
         </section>
 
@@ -73,8 +77,9 @@
             
         </section>
 
-        <!-- ?? -->
-        <section class="min-h-screen bg-gradient-to-b from-[#0D111C] from-20% via-[#0A0E17] via-70% to-[#040409] to-100%">
+        <!-- github 레포지토리 -->
+        <section class="pf-github-repo min-h-screen bg-gradient-to-b from-[#0D111C] from-20% via-[#0A0E17] via-70% to-[#040409] to-100%">
+
         </section>
 
         <div class="bg-gradient-to-b from-[#040409] from-30% via-[black] via-70% to-[#242424] to-100%">
@@ -112,7 +117,7 @@
                 <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
             </button>
 
-            <button class="tooltip tooltip-left flex" data-tip="??">
+            <button class="tooltip tooltip-left flex" data-tip="깃허브">
                 <div class="side-move-btn btn btn-xs btn-circle border-0 neon-box-yellow scale-[0.4] hover:scale-[0.7] bg-yellow-200 hover:shadow-[0_0_10px_#ff0]"></div>
             </button>
 

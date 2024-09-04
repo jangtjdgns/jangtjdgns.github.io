@@ -1,10 +1,17 @@
 :root {
-    --pf-main-text-shadow-color: #0fa;
+    /* --pf-main-text-shadow-color: #0fa;
     --pf-main-text-flicker-in-glow-color: #ff0;
     --pf-profile-spin-color: #c4d3ff;
     --pf-profile-text-shadow-color: #00f;
     --pf-profile-box-shadow-color: #00f;
     --pf-skills-text-shadow-color: #ff0;
+    --pf-project-text-shadow-color: #0fa; */
+    --pf-main-text-shadow-color: #0fa;
+    --pf-main-text-flicker-in-glow-color: #ff0;
+    --pf-profile-spin-color: #c4d3ff;
+    --pf-profile-text-shadow-color: #46A3D2;
+    --pf-profile-box-shadow-color: #46A3D2;
+    --pf-skills-text-shadow-color: #fbc02c;
     --pf-project-text-shadow-color: #0fa;
 }
 
@@ -16,9 +23,9 @@
 /* box neon 효과 */
 .neon-box-red { box-shadow: 0 0 21px #f00; }
 .neon-box-orange { box-shadow: 0 0 21px #f90; }
-.neon-box-yellow { box-shadow: 0 0 21px #ff0; }
+.neon-box-yellow { box-shadow: 0 0 21px #fbc02c; }
 .neon-box-green { box-shadow: 0 0 21px #0fa; }
-.neon-box-blue {  box-shadow: 0 0 21px #00f }
+.neon-box-blue {  box-shadow: 0 0 21px #a067ad }
 .neon-box-purple { box-shadow: 0 0 21px #a020f0; }
 .neon-box-pink { box-shadow: 0 0 21px #ff69b4; }
 .neon-box-black { box-shadow: 0 0 21px #000; }
@@ -27,9 +34,9 @@
 /* text neon 효과 */
 .neon-red { text-shadow: 0 0 21px #fff, 0 0 42px #f00, 0 0 82px #f00, 0 0 92px #f00, 0 0 102px #f00; }
 .neon-orange { text-shadow: 0 0 21px #fff, 0 0 42px #f90, 0 0 82px #f90, 0 0 92px #f90, 0 0 102px #f90; }
-.neon-yellow { text-shadow: 0 0 21px #fff, 0 0 42px #ff0, 0 0 82px #ff0, 0 0 92px #ff0, 0 0 102px #ff0; }
+.neon-yellow { text-shadow: 0 0 21px #fff, 0 0 42px #fbc02c, 0 0 82px #fbc02c, 0 0 92px #fbc02c, 0 0 102px #fbc02c; }
 .neon-green { text-shadow: 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa; }
-.neon-blue { text-shadow: 0 0 21px #fff, 0 0 42px #00f, 0 0 82px #00f, 0 0 92px #00f, 0 0 102px #00f; }
+.neon-blue { text-shadow: 0 0 21px #fff, 0 0 42px #46A3D2, 0 0 82px #46A3D2, 0 0 92px #46A3D2, 0 0 102px #46A3D2; }
 .neon-purple { text-shadow: 0 0 21px #fff, 0 0 42px #a020f0, 0 0 82px #a020f0, 0 0 92px #a020f0, 0 0 102px #a020f0; }
 .neon-pink { text-shadow: 0 0 21px #fff, 0 0 42px #ff69b4, 0 0 82px #ff69b4, 0 0 92px #ff69b4, 0 0 102px #ff69b4; }
 .neon-black { text-shadow: 0 0 21px #fff, 0 0 42px #000, 0 0 82px #000, 0 0 92px #000, 0 0 102px #000; }

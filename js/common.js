@@ -13,12 +13,12 @@ function runAnimation(index) {
             $('.title-border')
                 .removeClass('h-2 duration-[2500ms]')
                 .addClass('h-16 duration-[900ms]');
+            $('.title-border').removeClass('w-full').addClass('w-[calc(100%-160px)]')
         }, 3000)
 
         setTimeout(function () {
-            $('.moew-icon, .mouse-icon').removeClass('opacity-0');
-            $('.title-box').addClass('neon-box-purple');
-        }, 4000)
+            $('.moew-icon, .mouse-icon, .displly-resolution').removeClass('opacity-0');
+        }, 3500)
     }
 
     // 프로필 섹션 애니메이션 효과
@@ -28,6 +28,52 @@ function runAnimation(index) {
         $('.pf-profile .pf-profile-title').addClass('text-shadow-neon');
         $('.pf-profile .pf-profile-content-wrap>.pf-profile-content-image').removeClass('opacity-0')
         $('.pf-profile .pf-profile-content-wrap>.pf-profile-content-text').removeClass('opacity-0')
+
+        let curIndex = 1;
+        const carouselItemCount = $('.profile-carousel-item').length;
+        const translateX = 100 / carouselItemCount;
+        $('.profile-carousel-prev-btn').click(function(){
+            clickedMoveBtn(-1);
+        })
+
+        $('.profile-carousel-next-btn').click(function(){
+            clickedMoveBtn(1);
+        })
+
+        $('.profile-carousel-controls>button').click(function(){
+            curIndex = $(this).index() + 1;
+            clickedControlBtn();
+        })
+
+        // prev, next 버튼 클릭 시 curIndex 1, -1 추가
+        function clickedMoveBtn(moveBtn) {
+            curIndex += moveBtn;
+            clickedControlBtn();
+        }
+
+        // 캐러셀 자동 스크롤
+        autoCarousel();
+        function autoCarousel(){
+            setInterval(function(){
+                curIndex += 1;
+                clickedControlBtn();
+            }, 10000);
+        }
+
+        // 캐러셀 컨트롤 버튼
+        function clickedControlBtn() {
+            if (curIndex == 0) {
+                curIndex = carouselItemCount;
+            } else if (curIndex > carouselItemCount) {
+                curIndex = 1;
+            }
+
+            const control = $('.profile-carousel-controls>button');
+            control.removeClass('w-10 bg-blue-500').addClass('w-3 bg-blue-200');
+            control.eq(curIndex - 1).removeClass('w-3 bg-blue-200').addClass('w-10 bg-blue-500 check');
+            
+            $('.profile-carousel-wrap>ul').css('transform', `translateX(-${translateX * (curIndex - 1)}%)`);
+        }
     }
 
     // 스킬 섹션 애니메이션 효과
@@ -43,14 +89,13 @@ function runAnimation(index) {
         $('.pf-project-wrap').removeClass('opacity-0');
 
         let curIndex = 1;
-        const carouselItemCount = $('.pj-carousel-item').length;
+        const carouselItemCount = $('.project-carousel-item').length;
         const translateX = 100 / carouselItemCount;
-
-        $('.pj-carousel-prev-btn').click(function(){
+        $('.project-carousel-prev-btn').click(function(){
             clickedMoveBtn(-1);
         })
 
-        $('.pj-carousel-next-btn').click(function(){
+        $('.project-carousel-next-btn').click(function(){
             clickedMoveBtn(1);
         })
 
@@ -63,7 +108,7 @@ function runAnimation(index) {
                 curIndex = 1;
             }
 
-            $('.pj-carousel-wrap>ul').css('transform', `translateX(-${translateX * (curIndex - 1)}%)`);
+            $('.project-carousel-wrap>ul').css('transform', `translateX(-${translateX * (curIndex - 1)}%)`);
         }
     }
 }
