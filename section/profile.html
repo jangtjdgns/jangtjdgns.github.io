@@ -1,3 +1,5 @@
+<script>let autoCarouselInterval;</script>
+
 <div class="pf-profile-title mx-auto neon text-7xl self-center">PROFILE</div>
 <div class="w-[65vw] h-[65vh] mx-auto">
     <div class="pf-profile-wrap w-full h-full rounded-3xl">
@@ -17,13 +19,13 @@
                         </div>
                         
                         <div class="text-white text-center">
-                            <div class="badge badge-lg badge-neutral font-bold m-2">Age_25</div>
+                            <div class="badge badge-lg badge-neutral font-bold m-2">age 25</div>
                             <div class="badge badge-lg badge-neutral font-bold m-2">010-8942-9728</div>
                             <div>
-                                <a href="mailto:jangtjdgns9@naver.com?subject=안녕하세요"
+                                <a href="mailto:jangtjdgns0208@gmail.com?subject=안녕하세요"
                                     class="badge badge-lg badge-neutral font-bold m-2 border-2 hover:border-white transition-all duration-300
                                         flex flex-col-reverse items-center justify-start active:translate-y-1 active:border-gray-400 active:bg-opacity-80 overflow-hidden group">
-                                    <span class="group-hover:translate-y-full transition-transform duration-300">jangtjdgns9@naver.com</span>
+                                    <span class="group-hover:translate-y-full transition-transform duration-300">jangtjdgns0208@gmail.com</span>
                                     <span class="group-hover:translate-y-full transition-transform duration-300"><i class="fa-regular fa-envelope" style="color: #ffffff;"></i></span>                                   
                                 </a>
                             </div>
@@ -37,10 +39,10 @@
                     </div>
                     <hr />
                     <!-- 캐러셀 -->
-                    <div class="border-b profile-carousel-wrap relative overflow-hidden">
+                    <div class="profile-carousel-wrap relative overflow-hidden">
                         <ul class="flex w-[300%] transition-transform duration-[.6s]">
                             <!-- item 1 -->
-                            <li class="profile-carousel-item w-[100%]">
+                            <li class="profile-carousel-item w-[100%] pretendard">
                                 <div>
                                     <p class="text-lg">학기 중 접하게 된 코딩에 매력을 느껴 지금까지 개발공부에 매진하여 성장하고 있습니다. 늦게 시작한 만큼 뒤쳐지지 않기 위해 노력했고, 풀스택 개발자가 되기위한 발판으로 IT 학원을 다니며 실력을 쌓아왔습니다.</p>
                                     <!-- 목표 -->
@@ -50,7 +52,7 @@
                                     <p class="font-bold pt-2.5">- 사용자 입장에서 생각하는 개발자</p>
                                 </div>
                                 <!-- 바로가기 -->
-                                <div class="flex items-center justify-start gap-4 pt-10 px-4">
+                                <div class="flex items-center justify-start gap-4 pt-4 px-4">
                                     <div>
                                         <a href="https://github.com/jangtjdgns?tab=overview&from=2023-12-01&to=2023-12-31" target="_blank"
                                         class="tooltip rounded-full bg-black border-[3px] border-white hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
@@ -74,17 +76,16 @@
                                     </div>
                                     <div>
                                         <a href="https://blog.naver.com/jangtjdgns9" target="_blank"
-                                        class="tooltip rounded-full bg-black border-[3px] border-[#03cf5d] hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
-                                            data-tip="blog" data-ripple-light="true">
+                                        class="tooltip rounded-full bg-black border-[3px] border-white hover:border-transparent transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                            data-tip="blog" data-ripple-light="true"><!-- [#03cf5d] -->
                                             <img src="../images/profile/naver.png" class="w-12 h-12 rounded-full">
                                         </a>
                                     </div>
                                 </div>
-                                <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
                             </li>
 
                             <!-- item 2 -->
-                            <li class="profile-carousel-item w-[100%]">
+                            <li class="profile-carousel-item w-[100%] pretendard">
                                 <div class="grid grid-cols-2 gap-3 px-3">
                                     <div>
                                         <div class="text-2xl font-bold pb-3">학력</div>
@@ -105,19 +106,178 @@
                                     <div>
                                         <div class="text-2xl font-bold pb-3">코리아IT - 교육과정</div>
                                         <hr />
+                                        <!-- Java -->
                                         <div class="flex flex-col gap-1.5 pt-1">
-                                            <div class="text-sm"><b>Java</b> / 2023.01.12.~2023.02.10</div>
-                                            <div class="text-sm"><b>DBMS</b> / 2023.02.13~2023.02.24</div>
-                                            <div class="text-sm"><b>Pythome기초</b> / 2023.04.22~2023.05.14</div>
-                                            <div class="text-sm"><b>Front-End</b> / 2023.05.20~2023.10.28</div>
-                                            <div class="text-sm"><b>Back-End</b> / 2023.11.08~2024.04.08</div>
+                                            <div class="dropdown dropdown-left dropdown-hover">
+                                                <div tabindex="0" role="button" class="text-sm"><b>Java</b> / 2023.01.12.~2023.02.10</div>
+                                                <ul tabindex="0" class="dropdown-content menu bg-[#f1ece1] rounded-box z-[1] w-48 p-2 shadow gap-1">
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/Java" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">Java</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/Java2" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">Java2</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/2023_02_Basic_AM" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">2023_02_Basic_AM</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- DBMS -->
+                                            <div class="dropdown dropdown-left dropdown-hover">
+                                                <div tabindex="0" role="button" class="text-sm"><b>DBMS</b> / 2023.02.13~2023.02.24</div>
+                                                <ul tabindex="0" class="dropdown-content menu bg-[#f1ece1] rounded-box z-[1] w-48 p-2 shadow gap-1">
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/DBMS" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">DBMS</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Python -->
+                                            <div class="dropdown dropdown-left dropdown-hover">
+                                                <div tabindex="0" role="button" class="text-sm"><b>Python기초</b> / 2023.04.22~2023.05.14</div>
+                                                <ul tabindex="0" class="dropdown-content menu bg-[#f1ece1] rounded-box z-[1] w-48 p-2 shadow gap-1">
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/Python" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">Python</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Front-End -->
+                                            <div class="dropdown dropdown-left dropdown-hover">
+                                                <div tabindex="0" role="button" class="text-sm"><b>Front-End</b> / 2023.05.20~2023.10.28</div>
+                                                <ul tabindex="0" class="dropdown-content menu bg-[#f1ece1] rounded-box z-[1] w-48 p-2 shadow gap-1">
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/JavaScript_Practice" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">JavaScript_Practice</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/JS" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">JS</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/HTML_practice" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">HTML_practice</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/node" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">node</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!-- Back-End -->
+                                            <div class="dropdown dropdown-left dropdown-end dropdown-hover">
+                                                <div tabindex="0" role="button" class="text-sm"><b>Back-End</b> / 2023.11.08~2024.04.08</div>
+                                                <ul tabindex="0" class="dropdown-content menu bg-[#f1ece1] rounded-box z-[1] w-48 p-2 shadow gap-1">
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/2023_11_BAM" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">2023_11_BAM</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/2023_11_JAM" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">2023_11_JAM</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/2023_12_JSPAM" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">2023_12_JSPAM</div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="rounded-none">
+                                                        <a href="https://github.com/jangtjdgns/2024_01_SBAM" target="_blank"
+                                                            class="w-full h-full bg-[#cacccb] hover:bg-[#969691] transition-all focus:opacity-[0.85] active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50"
+                                                            data-ripple-light="true">
+                                                            <div>
+                                                                <img src="../images/profile/github.png" class="w-4 h-4 rounded-full">
+                                                            </div>
+                                                            <div class="text-xs text-[#3b3b3e]">2024_01_SBAM</div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
 
                             <!-- item 3 -->
-                            <li class="profile-carousel-item w-[100%]">
+                            <li class="profile-carousel-item w-[100%] pretendard">
                                 <div class="grid grid-cols-2 gap-3 px-3">
                                     <div>
                                         <div class="text-2xl font-bold pb-3">자격</div>
@@ -130,7 +290,7 @@
                                         <div class="text-2xl font-bold pb-3">수상</div>
                                         <hr />
                                         <div class="flex flex-col gap-1.5 pt-1">
-                                            <div class="text-sm"><b>CNU Edu 미래교육 교수-학습자료 개발 전시회 / 디지털 교육자료 부문 / 대상</b> / 2022.11</div>
+                                            <div class="text-sm"><b>CNU Edu 미래교육 교수-학습자료 개발 / 디지털 교육자료 부문 / 대상</b> / 2022.11</div>
                                         </div>
                                     </div>
                                 </div>
@@ -139,27 +299,38 @@
                     </div>
                     
                     <!-- 캐러셀 버튼, 컨트롤 -->
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="scale-[.5]">
+                    <div class="grid grid-cols-5 items-center justify-center gap-1">
+                        <!-- <div class="scale-[.5]">
                             <button class="profile-carousel-prev-btn btn btn-circle text-2xl bg-blue-100 hover:bg-blue-200">
                                 <i id="prev_btn" class="fa-solid fa-angle-left"></i>
                             </button>
+                        </div> -->
+                        <div></div>
+                        <div></div>
+                        <div class="profile-carousel-controls flex items-center justify-center gap-2">
+                            <button class="w-10 h-3 bg-gray-300 rounded-full hover:w-10 transition-all duration-200"></button>
+                            <button class="w-3 h-3 bg-gray-100 rounded-full hover:w-10 transition-all duration-200"></button>
+                            <button class="w-3 h-3 bg-gray-100 rounded-full hover:w-10 transition-all duration-200"></button>
+                        </div>
+                        <!-- 캐러셀 정지 및 재생 스왑 버튼 -->
+                        <div class="flex items-center justify-start">
+                            <label class="swap profile-carousel-swap">
+                                <input type="checkbox" />
+                                <span class="swap-on fill-current"><i class="fa-solid fa-play"></i></span>
+                                <span class="swap-off fill-current"><i class="fa-solid fa-pause"></i></span>
+                            </label>
                         </div>
 
-                        <div class="profile-carousel-controls flex gap-2">
-                            <button class="w-10 h-3 bg-blue-500 rounded-full hover:w-10 transition-all duration-200"></button>
-                            <button class="w-3 h-3 bg-blue-200 rounded-full hover:w-10 transition-all duration-200"></button>
-                            <button class="w-3 h-3 bg-blue-200 rounded-full hover:w-10 transition-all duration-200"></button>
-                        </div>
-
-                        <div class="scale-[.5]">
+                        <!-- <div class="scale-[.5]">
                             <button class="profile-carousel-next-btn btn btn-circle text-2xl bg-blue-100 hover:bg-blue-200">
                                 <i id="next_btn" class="fa-solid fa-angle-right"></i>
                             </button>
-                        </div>
+                        </div> -->
+                        <div></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>

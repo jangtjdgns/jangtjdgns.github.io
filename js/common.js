@@ -21,14 +21,16 @@ function runAnimation(index) {
         }, 3500)
     }
 
-    // 프로필 섹션 애니메이션 효과
+    // 프로필 섹션
     else if(index === 1) {
+        // 애니메이션 효과
         $('.pf-profile .pf-profile-wrap').addClass('profile-animation');
         $('.pf-profile-wrap>.spin-wrap>span').addClass('spin');
         $('.pf-profile .pf-profile-title').addClass('text-shadow-neon');
         $('.pf-profile .pf-profile-content-wrap>.pf-profile-content-image').removeClass('opacity-0')
         $('.pf-profile .pf-profile-content-wrap>.pf-profile-content-text').removeClass('opacity-0')
 
+        // 캐러셀
         let curIndex = 1;
         const carouselItemCount = $('.profile-carousel-item').length;
         const translateX = 100 / carouselItemCount;
@@ -54,10 +56,20 @@ function runAnimation(index) {
         // 캐러셀 자동 스크롤
         autoCarousel();
         function autoCarousel(){
-            setInterval(function(){
+            autoCarouselInterval = setInterval(function(){
                 curIndex += 1;
                 clickedControlBtn();
             }, 10000);
+        }
+
+
+        $('.profile-carousel-swap>input').change(function(){
+            playPauseBtn($(this).prop('checked'));
+        });
+
+        // 캐러셀 정지 및 재생 버튼
+        function playPauseBtn(isPaused) {
+            isPaused ? clearInterval(autoCarouselInterval) : autoCarousel();
         }
 
         // 캐러셀 컨트롤 버튼
@@ -69,8 +81,8 @@ function runAnimation(index) {
             }
 
             const control = $('.profile-carousel-controls>button');
-            control.removeClass('w-10 bg-blue-500').addClass('w-3 bg-blue-200');
-            control.eq(curIndex - 1).removeClass('w-3 bg-blue-200').addClass('w-10 bg-blue-500 check');
+            control.removeClass('w-10 bg-gray-300').addClass('w-3 bg-gray-100');
+            control.eq(curIndex - 1).removeClass('w-3 bg-gray-300').addClass('w-10 bg-gray-300');
             
             $('.profile-carousel-wrap>ul').css('transform', `translateX(-${translateX * (curIndex - 1)}%)`);
         }

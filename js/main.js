@@ -133,5 +133,4 @@ function sectionLoad() {
     $(".pf-profile").load("../section/profile.html");
     $(".pf-skills").load("../section/skills.html");
     $(".pf-project").load("../section/project.html");
-    $(".pf-contact").load("../section/contact.html");
 }
